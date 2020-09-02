@@ -56,7 +56,9 @@
 
             @foreach($categories as $category)
              <li class="nav-item">
-                <a class="nav-link" href="{{route('category',['id'=>$category->id])}}" >{{$category->cat_name}}</a> </li>
+                <a class="nav-link" href="{{route('category',['id'=>$category->id]
+                  )}}" >{{$category->cat_name}}</a> </li>
+                  addd commit
              @endforeach
              
                  </ul>
