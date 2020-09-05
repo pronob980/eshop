@@ -1,6 +1,8 @@
 <?php
 route::get('/','EiserController@index')->name('/');
 route::get('/category/{id}/{name}','EiserController@category')->name('category');
+route::get('/product-details/{id}','EiserController@productDetails')->name('product-details');
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 route::get('/category/add','CategoryController@addCategory')->name('add-category');

@@ -60,7 +60,8 @@
                   )}}" >{{$category->cat_name}}</a> </li>
                  
              @endforeach
-              </ul>
+             
+                 </ul>
               </div>
 
               <div class="col-lg-5 pr-0">

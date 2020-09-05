@@ -24,4 +24,9 @@ class EiserController extends Controller
       $catProducts = Product::where('cat_id',$id)->get();
       return view('font-end.category.category',['catProducts'=> $catProducts]);
    }
+   public function productDetails($id){
+      $productDetails = product::find($id);
+      return view('font-end.product.product-details',['productDetails' => $productDetails]);
+      
+   }
 }

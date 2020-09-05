@@ -67,7 +67,7 @@ Category
                         </div>
                       </div>
                       <div class="product-btm">
-                    <a href="">
+                    <a href="{{route('product-details',['id'=>$catProduct->id])}}" class="d-block">
                           <h4>{{$catProduct->product_name}}</h4>
                         </a>
                         <div class="mt-3">
