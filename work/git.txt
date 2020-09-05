@@ -1,0 +1,13 @@
+first time
+git init
+git remote add origin https://github.com/username/repo
+git add .
+git commit -m "commit message"
+git push -u origin master
+
+
+second time
+git add . && git commit -m "commit message" && git push
+
+
+

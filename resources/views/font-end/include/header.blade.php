@@ -56,12 +56,11 @@
 
             @foreach($categories as $category)
              <li class="nav-item">
-                <a class="nav-link" href="{{route('category',['id'=>$category->id]
+                <a class="nav-link" href="{{route('category',['id'=>$category->id,'name'=>$category->cat_name]
                   )}}" >{{$category->cat_name}}</a> </li>
-                  addd commit
+                 
              @endforeach
-             
-                 </ul>
+              </ul>
               </div>
 
               <div class="col-lg-5 pr-0">

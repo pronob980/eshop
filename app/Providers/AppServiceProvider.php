@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Providers;
-use\App\Category;
+use App\Category;
 use View;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view::composer('font-end.include.header',function ($view){
-            $view->with('categories',Category::where('status','1')->get());
+            $view->with('categories',category::where('status','1')->get());
         });
     }
 }

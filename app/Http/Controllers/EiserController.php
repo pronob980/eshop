@@ -7,21 +7,21 @@ use\App\Category;
 use Illuminate\Http\Request;
 
 class EiserController extends Controller
-{
+    {
    public function index(){
-   	$categories = Category::where('status','1')->get();
-   /*	$featuredProducts = Product::skip('1')->take('3')-get();
-   	$newProducts =Product::orderBy('id','DESC')->take('4')->get();*/
-   	return view('font-end.home.home', [
+      
+      $featuredProducts = Product::skip('1')->take('3')->get();
+      $newProducts =Product::orderBy('id','DESC')->take('5')->get();
+      return view('font-end.home.home', [
 
-   	    'categories' =>$categories
-   		/*'featuredProducts'=>$featuredProducts,
-   		'newProducts' =>$newProducts]*/
-   		
+          
+         'featuredProducts'=> $featuredProducts,
+         'newProducts' => $newProducts
+         
    ]);
    }
-   public function category(){
-   	
-   	return view('font-end.category.category');
+   public function category($id){
+      $catProducts = Product::where('cat_id',$id)->get();
+      return view('font-end.category.category',['catProducts'=> $catProducts]);
    }
 }
