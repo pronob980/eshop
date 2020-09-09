@@ -69,16 +69,13 @@
                             make your interior look awesome, and at the same time give you
                             the pleasant warm feeling during the winter.
                         </p>
+                        <form action="{{route('add-cart')}}" method="post">
+                            @csrf
                         <div class="product_count">
                             <label for="qty">Quantity:</label>
-                            <input
-                                    type="text"
-                                    name="qty"
-                                    id="sst"
-                                    maxlength="12"
-                                    value="1"
-                                    title="Quantity:"
-                                    class="input-text qty"
+                            <input type="text" name="qty" id="sst" min="1" value="1"class="input-text qty"
+                            />
+                            <input type="hidden" name="id" value="{{$productDetails->id}}"
                             />
                             <button
                                     onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
@@ -96,7 +93,7 @@
                             </button>
                         </div>
                         <div class="card_area">
-                            <a class="main_btn" href="#">Add to Cart</a>
+                            <button type="submit" name="btn" class="main_btn" >Add to Cart</button>
                             <a class="icon_btn" href="#">
                                 <i class="lnr lnr lnr-diamond"></i>
                             </a>
@@ -104,6 +101,7 @@
                                 <i class="lnr lnr lnr-heart"></i>
                             </a>
                         </div>
+                      </form>
                     </div>
                 </div>
             </div>

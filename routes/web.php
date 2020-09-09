@@ -3,6 +3,11 @@ route::get('/','EiserController@index')->name('/');
 route::get('/category/{id}/{name}','EiserController@category')->name('category');
 route::get('/product-details/{id}','EiserController@productDetails')->name('product-details');
 
+route::post('/cart','CartController@addCart')->name('add-cart');
+route::get('/cart','CartController@viewCart');
+route::get('/cart/{id}','CartController@deleteCart')->name('delete-cart');
+route::post('/cart/update','CartController@updateCart')->name('edit-cart');
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 route::get('/category/add','CategoryController@addCategory')->name('add-category');
