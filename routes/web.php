@@ -10,6 +10,8 @@ route::post('/cart/update','CartController@updateCart')->name('edit-cart');
 
 route::get('/checkout','checkoutController@index')->name('checkout');
 route::post('/checkout/sign-up','checkoutController@signUp')->name('checkout-sign-up');
+route::get('/checkout/shipping','checkoutController@shipping');
+route::post('/checkout/shipping','checkoutController@saveShipping')->name('new-shipping');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
