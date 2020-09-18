@@ -8,6 +8,9 @@ route::get('/cart','CartController@viewCart');
 route::get('/cart/{id}','CartController@deleteCart')->name('delete-cart');
 route::post('/cart/update','CartController@updateCart')->name('edit-cart');
 
+route::get('/checkout','checkoutController@index')->name('checkout');
+route::post('/checkout/sign-up','checkoutController@signUp')->name('checkout-sign-up');
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 route::get('/category/add','CategoryController@addCategory')->name('add-category');
